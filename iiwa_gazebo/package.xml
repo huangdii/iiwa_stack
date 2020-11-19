@@ -12,5 +12,6 @@
 
   <depend>iiwa_description</depend>
   <depend>gazebo_ros</depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
 
 </package>

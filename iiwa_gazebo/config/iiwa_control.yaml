@@ -3,7 +3,7 @@ gazebo_ros_control/pid_gains:
   # They're from iiwa_control/config/iiwa_control.yaml
   iiwa_joint_1:  {p: 700,  i: 0.01, d: 100}
 
-  iiwa_joint_2:  {p: 10000,  i: 100, d: 100}
+  iiwa_joint_2:  {p: 4000,  i: 100, d: 100}
 
   iiwa_joint_3: {p: 4500,  i: 35, d: 1}
 

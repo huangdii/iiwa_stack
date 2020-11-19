@@ -13,7 +13,7 @@
     
     <arg name="hardware_interface" default="PositionJointInterface" />
     <arg name="robot_name" default="iiwa" />
-    <arg name="model" default="iiwa14"/>
+    <arg name="model" default="iiwa7"/>
     <arg name="trajectory" default="true"/>
     
     <!-- Loads the Gazebo world. -->
@@ -25,7 +25,7 @@
     
     <!-- Spawn controllers - it uses a JointTrajectoryController -->
     <group  ns="$(arg robot_name)" if="$(arg trajectory)">
-        <!--rosparam file="$(find iiwa_gazebo)/config/iiwa_control.yaml" command="load" /-->        
+        <rosparam file="$(find iiwa_gazebo)/config/iiwa_control.yaml" command="load" />        
         <include file="$(find iiwa_control)/launch/iiwa_control.launch">
             <arg name="hardware_interface" value="$(arg hardware_interface)" />
             <arg name="controllers" value="joint_state_controller $(arg hardware_interface)_trajectory_controller" />
